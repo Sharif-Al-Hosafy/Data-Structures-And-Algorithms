@@ -1,0 +1,12 @@
+function binarySearch(arr, val) {
+  let left_pos = 0;
+  let right_pos = arr.length - 1;
+  while (left_pos <= right_pos) {
+    let mid = Math.floor((left_pos + right_pos) / 2);
+    if (arr[mid] === val) return "found";
+    else if (arr[mid] > val) right_pos = mid - 1;
+    else left_pos = mid + 1;
+  }
+  return "notFound";
+}
+console.log(binarySearch(arr, 2));
